@@ -95,7 +95,6 @@ header{
 .login-btn{
     text-decoration: none;
     font-size: 1.2vw;
-    /* background-color: chartreuse; */
     color: blue;
     display: flex;
     justify-content: center;
