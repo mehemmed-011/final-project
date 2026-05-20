@@ -14,6 +14,7 @@ header{
     border-bottom: 1px solid lightgray;
     position: fixed;
     top: 0;
+    z-index: 1000;
 }
 
 .container{
@@ -115,4 +116,66 @@ header{
 .bars{
     display: none;
     width: 2.5vw;
+}
+
+
+/* footer  */
+
+footer{
+    width: 100%;
+    background-color: rgb(17, 24, 39);
+    color: white;
+}
+
+.footer-boxes{
+    width: 80%;
+    margin: 0 auto;
+    padding: 2vw 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-box{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.logo1-f{
+    font-family: "Fredericka the Great", serif;
+    font-size: 1.5vw;
+    text-decoration: none;
+    color: white;
+}
+
+.logo2-f{
+    font-family: "Fredericka the Great", serif;
+    color: blue;
+}
+
+.footer-h4{
+    font-size: 1.2vw;
+}
+
+.footer-box p,a{
+    color: gray;
+    text-decoration: none;
+    font-size: 1vw;
+}
+
+.footer-box a:hover{
+    color: white;
+}
+
+.social a img{
+    width: 2vw;
+}
+
+.footer-bottom{
+    width: 100%;
+    text-align: center;
+    font-size: 0.9vw;
+    color: lightgray;
+    padding: 1vw;
+    border-top: 1px solid gray;
 }
