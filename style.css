@@ -12,6 +12,8 @@ header{
     width: 100%;
     background-color: white;
     border-bottom: 1px solid lightgray;
+    position: fixed;
+    top: 0;
 }
 
 .container{
@@ -95,7 +97,6 @@ header{
 .login-btn{
     text-decoration: none;
     font-size: 1.2vw;
-    /* background-color: chartreuse; */
     color: blue;
     display: flex;
     justify-content: center;
@@ -114,4 +115,121 @@ header{
 .bars{
     display: none;
     width: 2.5vw;
+}
+
+/* section 1 */
+
+.first-section{
+    width: 100%;
+    background-color: #f3f9ff;
+    margin-top: 4vw;
+}
+
+.first-boxes{
+    width: 80%;
+    margin: 0 auto;
+    padding: 4vw 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.first-box{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.first-h1{
+    font-size: 3vw;
+}
+
+.first-p{
+    width: 32vw;
+    font-size: 1.2vw;
+    color: gray;
+}
+
+.first-btn{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vw;
+    padding: 1vw;
+    margin-top: 2vw;
+    font-size: 1vw;
+    border: none;
+    border-radius: 0.6vw;
+    background-color: rgba(0, 0, 255, 0.699);
+    color: white;
+}
+
+.first-btn:hover{
+    background-color: blue;
+    cursor: pointer;
+    box-shadow: 0 0 10px lightblue;
+    margin-top: 1.9vw;
+    margin-bottom: 0.1vw;
+}
+
+.logo-img{
+    width: 40vw;
+}
+
+/* section 2 */
+
+.second-section{
+    width: 100%;
+    background-color: #f3f9ff;
+}
+
+.second-boxes{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.second-h2{
+    font-size: 2vw;
+}
+
+.second-box{
+    margin-top: 1vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw 0;
+}
+
+.cat-card{
+    width: 32%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    text-decoration: none;
+    padding: 1vw;
+    border: 1px solid gray;
+    border-radius: 1vw;
+}
+
+.cat-card:hover{
+    border: 1px solid blue;
+    box-shadow: 0 0 10px lightgray;
+}
+
+.cat-icon{
+    width: 6vw;
+}
+
+.second-h3{
+    font-size: 1.5vw;
+    color: black;
+}
+
+.second-p{
+    color: gray;
+    font-size: 1vw;
 }
