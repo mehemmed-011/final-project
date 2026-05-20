@@ -119,6 +119,148 @@ header{
 }
 
 
+/* product section */
+
+.product-section{
+    width: 100%;
+    background-color: #f3f9ff;
+    margin-top: 4vw;
+}
+
+.product-section-box{
+    width: 80%;
+    margin: 0 auto;
+    padding: 5vw 0;
+}
+
+.product-h2{
+    font-size: 2.5vw;
+}
+
+.filter-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2vw;
+}
+
+.filters{
+    display: flex;
+    gap: 1vw;
+}
+
+.chip{
+    width: 7vw;
+    height: 2.2vw;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 1vw;
+    font-size: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.active-chip{
+    background-color: blue;
+    border: 1px solid blue;
+    color: white;
+}
+
+.chip:hover{
+    border: 1px solid blue;
+    cursor: pointer;
+}
+
+.select{
+    width: 12vw;
+    height: 2.2vw;
+    font-size: 1vw;
+    border: 1px solid lightgray;
+    border-radius: 0.5vw;
+}
+
+.select:hover{
+    cursor: pointer;
+    border: 1px solid blue;
+}
+
+.product-boxes{
+    margin-top: 2vw;
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    gap: 2.1vw;
+}
+
+.product-card{
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 1vw;
+    border: 1px solid lightgray;
+}
+
+.product-card:hover{
+    box-shadow: 0 0 10px gray;
+    scale: 1.01;
+    transition: 400ms;
+}
+
+.product-img{
+    background-color: lightgray;
+    width: 100%;
+    height: 19vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw;
+    border-radius: 1vw 1vw 0 0;
+}
+
+.product-img img{
+    width: 100%;
+}
+
+.product-body{
+    display: flex;
+    flex-direction: column;
+    padding: 1vw;
+    gap: 1.2vw;
+}
+
+.product-title{
+    font-size: 1.2vw;
+    font-weight: 600;
+}
+
+.product-meta{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9vw;
+    color: gray;
+}
+
+.product-price{
+    font-size: 1.2vw;
+    font-weight: 900;
+    color: blue;
+}
+
+.add-btn{
+    height: 2.5vw;
+    border: 1px solid lightgray;
+    border-radius: 0.5vw;
+    font-size: 1.1vw;
+}
+
+.add-btn:hover{
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
 /* footer  */
 
 footer{
