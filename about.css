@@ -118,6 +118,62 @@ header{
     width: 2.5vw;
 }
 
+main{
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 4vw;
+    background-color: #f3f9ff;
+}
+
+.info-container{
+    width: 80%;
+    margin: 0 auto;
+    padding: 3vw 0;
+}
+
+.info-h1{
+    font-size: 2vw;
+}
+
+.info-lead{
+    padding: 1.5vw 0;
+    font-size: 1.2vw;
+    color: gray;
+    width: 40vw;
+}
+
+.info-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1vw;
+}
+
+.info-card{
+    width: 23%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8vw;
+    padding: 1.2vw;
+    margin-top: 1vw;
+    border: 1px solid lightgray;
+    border-radius: 0.5vw;
+}
+
+.info-card:hover{
+    margin-top: 0.9vw;
+    box-shadow: 0 0 10px lightgray;
+}
+
+.info-card h3{
+    font-size: 1.3vw;
+}
+
+.info-card p{
+    font-size: 1vw;
+}
+
 
 /* footer  */
 

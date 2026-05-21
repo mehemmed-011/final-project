@@ -118,6 +118,18 @@ header{
     width: 2.5vw;
 }
 
+main{
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 4vw;
+    background-color: #f3f9ff;
+}
+
+.contact-container{
+    width: 80%;
+    margin: 0 auto;
+}
+
 
 /* footer  */
 

@@ -118,6 +118,11 @@ header{
     width: 2.5vw;
 }
 
+main{
+    width: 100%;
+    min-height: 100vh;
+}
+
 /* section 1 */
 
 .first-section{
