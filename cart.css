@@ -121,7 +121,153 @@ header{
 main{
     width: 100%;
     min-height: 100vh;
+    margin-top: 4vw;
+    background-color: #f3f9ff;
 }
+
+.cart-container{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 4vw;
+}
+
+.cart-h1{
+    font-size: 2vw;
+}
+
+.cart-layout{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    margin-top: 2vw;
+}
+
+.cart-items{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.cart-item{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2vw;
+    border: 1px solid lightgray;
+    border-radius: 1vw;
+}
+
+.cart-item:hover{
+    box-shadow: 0 0 10px lightgray;
+    transition: 250ms;
+}
+
+.cart-box{
+    display: flex;
+    gap: 1vw;
+}
+
+.cart-img-box{
+    background-color: lightgray;
+    width: 6vw;
+    padding: 0.5vw;
+    border-radius: 0.5vw;
+}
+
+.cart-img{
+    width: 100%;
+}
+
+.cart-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cart-h4{
+    font-size: 1.2vw;
+}
+
+.cart-price{
+    font-size: 1.1vw;
+    color: blue;
+    font-weight: 600;
+}
+
+.cart-qty{
+    display: flex;
+    gap: 0.5vw;
+}
+
+.minus-btn,
+.plus-btn{
+    width: 1.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2vw;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 0.2vw;
+}
+
+.minus-btn:hover,
+.plus-btn:hover{
+    border: 1px solid blue;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+.cart-item-count{
+    font-size: 1.2vw;
+}
+
+.cart-remove-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4vw;
+    color: red;
+    border: none;
+    background: none;
+}
+
+.cart-remove-btn:hover{
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+
+.cart-summary{
+    width: 27%;
+    background-color: white;
+    padding: 1.2vw;
+    border: 1px solid lightgray;
+    border-radius: 1vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+
+.cart-h3{
+    font-size: 1.2vw;
+    margin-bottom: 1vw;
+}
+
+.cart-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-row span{
+    color: gray;
+    font-size: 1vw;
+}
+
 
 
 /* footer  */
