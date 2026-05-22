@@ -120,7 +120,8 @@ header{
 
 main{
     width: 100%;
-    min-height: 100vh;
+    /* min-height: 100vh; */
+    min-height: calc(100vh - 15.24vw);
     margin-top: 4vw;
     background-color: #f3f9ff;
 }
@@ -161,7 +162,7 @@ main{
 
 .contact-form{
     width: 48%;
-    height: 29vw;
+    /* height: 29vw; */
     background-color: white;
     display: flex;
     flex-direction: column;

@@ -53,11 +53,6 @@ header{
     color: blue;
 }
 
-.active{
-    color: blue;
-    border-bottom: 3px solid blue;
-}
-
 .nav-actions{
     display: flex;
     gap: 1.5vw;
@@ -120,7 +115,8 @@ header{
 
 main{
     width: 100%;
-    min-height: 100vh;
+    /* min-height: 100vh; */
+    min-height: calc(100vh - 15.24vw);
     margin-top: 4vw;
     background-color: #f3f9ff;
 }

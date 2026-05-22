@@ -26,7 +26,37 @@
     </header>
 
     <main>
-      
+      <section class="auth-container">
+        <div class="auth-cards">
+          <div class="auth-tabs">
+            <button class="auth-tab login active-tab">Giriş</button>
+            <button class="auth-tab signup">Qeydiyyat</button>
+          </div>
+
+          <form id="login-form" class="auth-form">
+            <label>Email
+              <input class="login-email" type="email" required placeholder="email@example.com"/>
+            </label>
+            <label>Şifrə
+              <input class="login-password" type="password" required placeholder="••••••••"/>
+            </label>
+            <button class="login-button" type="submit">Daxil ol</button>
+          </form>
+
+          <form id="signup-form" class="auth-form hidden">
+            <label>Ad Soyad
+              <input class="signup-name" type="text" required/>
+            </label>
+            <label>Email
+              <input class="signup-email" type="email" required/>
+            </label>
+            <label>Şifrə
+              <input class="signup-password" type="password" required/>
+            </label>
+            <button class="signup-button" type="submit">Qeydiyyatdan keç</button>
+          </form>
+        </div>
+      </section>
     </main>
 
 

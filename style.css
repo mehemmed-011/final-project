@@ -120,7 +120,8 @@ header{
 
 main{
     width: 100%;
-    min-height: 100vh;
+    /* min-height: 100vh; */
+    min-height: calc(100vh - 15.24vw);
     background-color: #f3f9ff;
 }
 
