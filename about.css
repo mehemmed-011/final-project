@@ -43,6 +43,10 @@ header{
     gap: 2vw;
 }
 
+.menu-phone{
+    display: none;
+}
+
 .nav-a{
     text-decoration: none;
     font-size: 1.2vw;
@@ -235,4 +239,113 @@ footer{
     color: lightgray;
     padding: 1vw;
     border-top: 1px solid gray;
+}
+
+@media (max-width: 600px) {
+        /* header  */
+
+    .container{
+        width: 80%;
+        height: 8vw;
+    }
+
+    .logo{
+    font-size: 3vw;
+}
+
+.menu{
+    display: none;
+}
+
+.menu-phone{
+    background-color: #f3f9ff;
+    margin: 8vw auto 0;
+    padding: 2vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2vw;
+    border-bottom: 1px solid lightgray;
+}
+
+.nav-a{
+    font-size: 2.4vw;
+}
+
+.nav-actions{
+    gap: 3vw;
+}
+
+.cart-btn{
+    width: 8vw;
+    height: 5vw;
+
+}
+
+.cart{
+    width: 4.4vw;
+}
+
+.cart-count{
+    font-size: 1.6vw;
+    width: 2vw;
+    border-radius: 50%;
+    top: 0;
+    right: 0.4vw;
+}
+
+.login-btn{
+    font-size: 2.4vw;
+    padding: 1vw;
+    height: 4.6vw;
+    border-radius: 0.4vw;
+}
+
+.bars{
+    display: block;
+    width: 5vw;
+}
+
+main{
+    min-height: calc(100vh - 19vw);
+    margin-top: 0;
+}
+
+
+/* footer  */
+
+.footer-boxes{
+    width: 80%;
+    padding: 2vw 0;
+    flex-direction: column;
+    gap: 3vw;
+}
+
+.footer-box{
+    width: max-content;
+    gap: 1.5vw;
+}
+
+.logo1-f{
+    font-size: 3vw;
+}
+
+.footer-h4{
+    font-size: 2.4vw;
+}
+
+.footer-box p,a{
+    font-size: 2vw;
+}
+
+.social a img{
+    width: 4vw;
+}
+
+.footer-bottom{
+    font-size: 1.8vw;
+    padding: 2vw;
+}
 }
