@@ -258,16 +258,19 @@ footer{
 }
 
 .menu-phone{
-    background-color: #f3f9ff;
+    background-color: white;
     margin: 12vw auto 0;
     padding: 3vw;
     width: 100%;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     gap: 3vw;
     border-bottom: 1px solid lightgray;
+    position: fixed;
+    top: 1px;
+    z-index: 1000;
 }
 
 .nav-a{
@@ -309,7 +312,11 @@ footer{
 
 main{
     min-height: calc(100vh - 19vw);
-    margin-top: 0;
+    /* flex  */
+    /* margin-top: 45vw; */
+    /* none  */
+    margin-top: 12vw;
+}
 }
 
 
