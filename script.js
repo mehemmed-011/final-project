@@ -6,9 +6,10 @@ let productBox = document.querySelector(".product-boxes");
 let bars = document.querySelector(".bars");
 let menuPhone = document.querySelector(".menu-phone");
 let main = document.querySelector("main");
+
 let state = false;
 bars.addEventListener("click", ()=>{
-    if(!(state)){
+    if(!state){
         menuPhone.style.display = "flex"
         main.style.marginTop = "45vw";
         state = true;
