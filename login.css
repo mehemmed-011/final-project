@@ -358,6 +358,12 @@ main{
     margin-top: 12vw;
 }
 
+.auth-container{
+    width: 80%;
+    padding-top: 16vw;
+    padding-bottom: 0;
+}
+
 /* footer  */
 
 .footer-boxes{

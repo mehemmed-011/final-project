@@ -357,6 +357,68 @@ main{
     margin-top: 12vw;
 }
 
+.contact-container{
+    padding: 8vw 0;
+}
+
+.contact-h1{
+    font-size: 4vw;
+}
+
+.contact-layout{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4vw;
+    gap: 3vw;
+}
+
+.contact-info{
+    width: 96%;
+    height: 58vw;
+    gap: 4vw;
+    padding: 4vw;
+    border-radius: 2vw;
+}
+
+.contact-info-row{
+    padding-bottom: 2vw;
+    font-size: 2.2vw;
+}
+
+.contact-form{
+    width: 96%;
+    /* height: 29vw; */
+    gap: 3vw;
+    padding: 4vw;
+    border-radius: 2vw;
+}
+
+.contact-form label{
+    gap: 0.6vw;
+    font-size: 2.2vw;
+}
+
+label input{
+    height: 5vw;
+    padding: 1.2vw;
+    font-size: 2vw;
+    border-radius: 1vw;
+}
+
+label textarea{
+    height: 15vw;
+    padding: 1.2vw;
+    font-size: 2vw;
+    border-radius: 1vw;
+}
+
+.contact-btn{
+    height: 5vw;
+    font-size: 2.2vw;
+    border-radius: 1vw;
+}
+
 /* footer  */
 
 .footer-boxes{
