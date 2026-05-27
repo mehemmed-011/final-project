@@ -211,7 +211,7 @@ main{
     border: 1px solid blue;
 }
 
-.product-boxes{
+.product-boxes2{
     margin-top: 2vw;
     display: flex;
     /* justify-content: space-between; */
@@ -472,7 +472,7 @@ main{
     border-radius: 1vw;
 }
 
-.product-boxes{
+.product-boxes2{
     margin-top: 4vw;
     justify-content: space-between;
     flex-wrap: wrap;
