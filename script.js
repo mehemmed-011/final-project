@@ -1,8 +1,3 @@
-let api = "https://dummyjson.com/products/category/";
-let categories = ["smartphones", "mobile-accessories", "laptops"];
-let productBox = document.querySelector(".product-boxes");
-
-
 let bars = document.querySelector(".bars");
 let menuPhone = document.querySelector(".menu-phone");
 let main = document.querySelector("main");
