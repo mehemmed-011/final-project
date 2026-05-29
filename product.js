@@ -5,6 +5,8 @@ let productBox2 = document.querySelector(".product-boxes2");
 let filterBtn = document.querySelectorAll(".chip");
 let select = document.querySelector(".select");
 
+let currentProducts = [];
+
 
 //Əsas səhifə
 async function getProducts(){
@@ -60,6 +62,8 @@ async function getProducts2(){
 
     allProducts2.sort(() => Math.random() - 0.5);
 
+    currentProducts = allProducts2;
+
     allProducts2.forEach(product => {
 
         productBox2.innerHTML += `
@@ -95,6 +99,8 @@ async function smartProduct(){
         sProducts.push(...data.products);
     })
 
+    currentProducts = sProducts;
+
     sProducts.forEach(product => {
 
         productBox2.innerHTML += `
@@ -129,6 +135,8 @@ async function laptopProduct(){
         lProducts.push(...data.products);
     })
 
+    currentProducts = lProducts;
+
     lProducts.forEach(product => {
 
         productBox2.innerHTML += `
@@ -162,6 +170,8 @@ async function accessoriesProduct(){
     .then(data =>{
         accProducts.push(...data.products);
     })
+
+    currentProducts = accProducts;
 
     accProducts.forEach(product => {
 
@@ -212,4 +222,64 @@ filterBtn.forEach(btn => {
             accessoriesProduct();
         }
     });
+});
+
+//Select hissəsi
+select.addEventListener("change", () => {
+
+    let sortedProducts = [...currentProducts];
+
+    if(select.value == "price-asc"){
+
+        sortedProducts.sort((a, b) => a.price - b.price);
+    }
+
+    else if(select.value == "price-desc"){
+
+        sortedProducts.sort((a, b) => b.price - a.price);
+    }
+
+    else if(select.value == "name-asc"){
+
+        sortedProducts.sort((a, b) => 
+            a.title.localeCompare(b.title)
+        );
+    }
+
+    else if(select.value == "name-desc"){
+
+        sortedProducts.sort((a, b) => 
+            b.title.localeCompare(a.title)
+        );
+    }
+
+    else{
+
+        sortedProducts = [...currentProducts];
+    }
+
+    productBox2.innerHTML = "";
+
+    sortedProducts.forEach(product => {
+
+        productBox2.innerHTML += `
+        
+            <article class="product-card">
+            <div class="product-img">
+                <img src="${product.thumbnail}" alt="#"/>
+            </div>
+            <div class="product-body">
+                <div class="product-title">${product.title}</div>
+                <div class="product-meta">
+                <span>⭐ ${product.rating}</span>
+                <span>${product.tags[0]}</span>
+                </div>
+                <div class="product-price">$${product.price}</div>
+                <button class="add-btn">Səbətə əlavə et</button>
+            </div>
+            </article>
+        
+        `;
+    });
+
 });
