@@ -86,7 +86,43 @@ async function getProducts2(){
         `;
     });
 }
-getProducts2();
+
+
+let params = new URLSearchParams(window.location.search);
+let category = params.get("cat");
+
+
+if(!category){
+    getProducts2();
+}
+
+if(category){
+    filterBtn.forEach(btn => {
+        btn.classList.remove("active-chip");
+    });
+
+    let activeBtn = document.querySelector(
+        `.chip[value="${category}"]`
+    );
+
+    if(activeBtn){
+        activeBtn.classList.add("active-chip");
+    }
+
+    productBox2.innerHTML = "";
+
+    if(category == "smartphones"){
+        smartProduct();
+    }
+
+    else if(category == "laptops"){
+        laptopProduct();
+    }
+
+    else if(category == "mobile-accessories"){
+        accessoriesProduct();
+    }
+}
 
 
 //Smartfon hissəsi
@@ -199,6 +235,7 @@ async function accessoriesProduct(){
 //Filter hissəsi
 filterBtn.forEach(btn => {
     btn.addEventListener("click", () => {
+        select.value = "default";
         filterBtn.forEach(b => b.classList.remove("active-chip"));
         btn.classList.add("active-chip");
 
