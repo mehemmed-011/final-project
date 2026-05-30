@@ -44,12 +44,17 @@ async function getProducts(){
         
         `;
     });
+
+    checkCartButtons();
 }
-getProducts();
+if(productBox1){
+    getProducts();
+}
 
 
 //Product səhifə
 async function getProducts2(){
+    productBox2.innerHTML = "";
     let allProducts2 = [];
     for(let i = 0; i < categories.length; i++){
         let response = await
@@ -85,6 +90,8 @@ async function getProducts2(){
         
         `;
     });
+
+    checkCartButtons();
 }
 
 
@@ -92,11 +99,11 @@ let params = new URLSearchParams(window.location.search);
 let category = params.get("cat");
 
 
-if(!category){
+if(productBox2 && !category){
     getProducts2();
 }
 
-if(category){
+if(category && productBox2){
     filterBtn.forEach(btn => {
         btn.classList.remove("active-chip");
     });
@@ -112,21 +119,28 @@ if(category){
     productBox2.innerHTML = "";
 
     if(category == "smartphones"){
-        smartProduct();
+        if(productBox2){
+            smartProduct();
+        }
     }
 
     else if(category == "laptops"){
-        laptopProduct();
+        if(productBox2){
+            laptopProduct();
+        }
     }
 
     else if(category == "mobile-accessories"){
-        accessoriesProduct();
+        if(productBox2){
+            accessoriesProduct();
+        }
     }
 }
 
 
 //Smartfon hissəsi
 async function smartProduct(){
+    productBox2.innerHTML = "";
     let sProducts = [];
     let response = await
     fetch(`${api}smartphones`)
@@ -158,11 +172,14 @@ async function smartProduct(){
         
         `;
     });
+
+    checkCartButtons();
 }
 
 
 //Laptop hissəsi
 async function laptopProduct(){
+    productBox2.innerHTML = "";
     let lProducts = [];
     let response = await
     fetch(`${api}laptops`)
@@ -194,11 +211,14 @@ async function laptopProduct(){
         
         `;
     });
+
+    checkCartButtons();
 }
 
 
 //Aksesuar hissəsi
 async function accessoriesProduct(){
+    productBox2.innerHTML = "";
     let accProducts = [];
     let response = await
     fetch(`${api}mobile-accessories`)
@@ -230,6 +250,8 @@ async function accessoriesProduct(){
         
         `;
     });
+
+    checkCartButtons();
 }
 
 //Filter hissəsi
@@ -239,7 +261,9 @@ filterBtn.forEach(btn => {
         filterBtn.forEach(b => b.classList.remove("active-chip"));
         btn.classList.add("active-chip");
 
-        productBox2.innerHTML = "";
+        if(productBox2){
+            productBox2.innerHTML = "";
+        }
         
         if(btn.value == "all"){
             getProducts2();
@@ -262,61 +286,110 @@ filterBtn.forEach(btn => {
 });
 
 //Select hissəsi
-select.addEventListener("change", () => {
+if(select && productBox2){
+    select.addEventListener("change", () => {
 
-    let sortedProducts = [...currentProducts];
+        let sortedProducts = [...currentProducts];
 
-    if(select.value == "price-asc"){
+        if(select.value == "price-asc"){
 
-        sortedProducts.sort((a, b) => a.price - b.price);
-    }
+            sortedProducts.sort((a, b) => a.price - b.price);
+        }
 
-    else if(select.value == "price-desc"){
+        else if(select.value == "price-desc"){
 
-        sortedProducts.sort((a, b) => b.price - a.price);
-    }
+            sortedProducts.sort((a, b) => b.price - a.price);
+        }
 
-    else if(select.value == "name-asc"){
+        else if(select.value == "name-asc"){
 
-        sortedProducts.sort((a, b) => 
-            a.title.localeCompare(b.title)
-        );
-    }
+            sortedProducts.sort((a, b) => 
+                a.title.localeCompare(b.title)
+            );
+        }
 
-    else if(select.value == "name-desc"){
+        else if(select.value == "name-desc"){
 
-        sortedProducts.sort((a, b) => 
-            b.title.localeCompare(a.title)
-        );
-    }
+            sortedProducts.sort((a, b) => 
+                b.title.localeCompare(a.title)
+            );
+        }
 
-    else{
+        else{
 
-        sortedProducts = [...currentProducts];
-    }
+            sortedProducts = [...currentProducts];
+        }
 
-    productBox2.innerHTML = "";
+        productBox2.innerHTML = "";
 
-    sortedProducts.forEach(product => {
+        sortedProducts.forEach(product => {
 
-        productBox2.innerHTML += `
-        
-            <article class="product-card">
-            <div class="product-img">
-                <img src="${product.thumbnail}" alt="#"/>
-            </div>
-            <div class="product-body">
-                <div class="product-title">${product.title}</div>
-                <div class="product-meta">
-                <span>⭐ ${product.rating}</span>
-                <span>${product.tags[0]}</span>
+            productBox2.innerHTML += `
+            
+                <article class="product-card">
+                <div class="product-img">
+                    <img src="${product.thumbnail}" alt="#"/>
                 </div>
-                <div class="product-price">$${product.price}</div>
-                <button class="add-btn">Səbətə əlavə et</button>
-            </div>
-            </article>
-        
-        `;
-    });
+                <div class="product-body">
+                    <div class="product-title">${product.title}</div>
+                    <div class="product-meta">
+                    <span>⭐ ${product.rating}</span>
+                    <span>${product.tags[0]}</span>
+                    </div>
+                    <div class="product-price">$${product.price}</div>
+                    <button class="add-btn">Səbətə əlavə et</button>
+                </div>
+                </article>
+            
+            `;
+        });
 
+        checkCartButtons();
+
+    });
+}
+
+
+//localStorage-a əlavə etmək hissəsi
+document.addEventListener("click", (e) => {
+    if(e.target.classList.contains("add-btn")){
+
+        let productCard = e.target.closest(".product-card");
+
+        let product = {
+            title: productCard.querySelector(".product-title").textContent,
+            price: Number(productCard.querySelector(".product-price").textContent.replace("$", "")),
+            image: productCard.querySelector("img").src,
+            quantity: 1
+        };
+
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        let existingProduct = cart.find(item => item.title === product.title);
+        if(existingProduct){
+            e.target.textContent = "Səbətdə";
+            return;
+        }
+
+        cart.push(product);
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+        e.target.textContent = "Səbətdə";
+        e.target.disabled = true;
+    }
 });
+
+function checkCartButtons(){
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    document.querySelectorAll(".product-card").forEach(card => {
+        let title = card.querySelector(".product-title").textContent;
+        let btn = card.querySelector(".add-btn");
+        let exists = cart.find(item => item.title === title);
+
+        if(exists){
+            btn.textContent = "Səbətdə";
+            btn.disabled = true;
+        }
+    });
+}
