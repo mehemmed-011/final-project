@@ -374,6 +374,7 @@ document.addEventListener("click", (e) => {
         cart.push(product);
 
         localStorage.setItem("cart", JSON.stringify(cart));
+        updateCartCount();
         e.target.textContent = "Səbətdə";
         e.target.disabled = true;
     }
@@ -393,3 +394,20 @@ function checkCartButtons(){
         }
     });
 }
+
+let cartCount = document.querySelector(".cart-count");
+function updateCartCount() {
+    if (!cartCount){
+        return;
+    }
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let totalItems = 0;
+    cart.forEach(item => {
+        totalItems += item.quantity;
+    });
+
+    cartCount.textContent = totalItems;
+}
+updateCartCount();
