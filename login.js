@@ -84,11 +84,21 @@ if(loginIcon && userIcon){
     }
 }
 
-//bu hisse silinecek
-// userIcon.addEventListener("click", (e) => {
-//     e.preventDefault();
+let userName = document.querySelector(".user-page-h1");
+let userEmail = document.querySelector(".user-page-p");
+let logoutBtn = document.querySelector(".user-logout-btn");
 
-//     localStorage.removeItem("isLoggedIn");
+let user = JSON.parse(localStorage.getItem("user"));
 
-//     window.location.reload();
-// });
+if(user && userName && userEmail){
+    userName.textContent = user.name;
+    userEmail.textContent = user.email;
+}
+
+if(logoutBtn){
+    logoutBtn.addEventListener("click", () => {
+        localStorage.removeItem("isLoggedIn");
+
+        window.location.href = "index.html";
+    });
+}
