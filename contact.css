@@ -223,7 +223,7 @@ label textarea{
     font-weight: 600;
     background-color: white;
     color: blue;
-    border: 2px solid blue;
+    border: 0.2vw solid blue;
     border-radius: 0.5vw;
 }
 
