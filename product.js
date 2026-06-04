@@ -394,20 +394,3 @@ function checkCartButtons(){
         }
     });
 }
-
-let cartCount = document.querySelector(".cart-count");
-function updateCartCount() {
-    if (!cartCount){
-        return;
-    }
-
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-    let totalItems = 0;
-    cart.forEach(item => {
-        totalItems += item.quantity;
-    });
-
-    cartCount.textContent = totalItems;
-}
-updateCartCount();
