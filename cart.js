@@ -93,5 +93,15 @@ function updateCart() {
     renderCart();
 }
 
+let payBtn = document.querySelector(".cart-pay-button");
+payBtn.addEventListener("click", ()=> {
+    if(localStorage.getItem("isLoggedIn") === "true"){
+        window.location.href = "#";
+    }
+    else{
+        window.location.href = "login.html";
+    }
+})
+
 renderCart();
 updateCartCount();

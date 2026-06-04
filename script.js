@@ -16,3 +16,15 @@ bars.addEventListener("click", ()=>{
         state = false;
     }
 })
+
+let loginIcon = document.querySelector(".login-btn");
+let userIcon = document.querySelector(".user-icon");
+
+if(localStorage.getItem("isLoggedIn") === "true"){
+    loginIcon.style.display = "none";
+    userIcon.style.display = "flex";
+}
+else{
+    loginIcon.style.display = "flex";
+    userIcon.style.display = "none";
+}

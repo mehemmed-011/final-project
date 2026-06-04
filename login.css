@@ -210,6 +210,20 @@ main{
     border-radius: 5px;
 }
 
+.signup-alert{
+    font-size: 15px;
+    text-align: center;
+    color: red;
+    display: none;
+}
+
+.login-alert{
+    font-size: 15px;
+    text-align: center;
+    color: red;
+    display: none;
+}
+
 .login-button,
 .signup-button{
     width: 100%;

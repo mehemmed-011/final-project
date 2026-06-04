@@ -48,19 +48,21 @@
             <label>Şifrə
               <input class="login-password" type="password" required placeholder="••••••••"/>
             </label>
+            <p class="login-alert">Email və ya şifrə yanlışdır!</p>
             <button class="login-button" type="submit">Daxil ol</button>
           </form>
 
           <form id="signup-form" class="auth-form hidden">
             <label>Ad Soyad
-              <input class="signup-name" type="text" required/>
+              <input class="signup-name" type="text" required placeholder="Məhəmməd İbrahimli"/>
             </label>
             <label>Email
-              <input class="signup-email" type="email" required/>
+              <input class="signup-email" type="email" required placeholder="email@example.com"/>
             </label>
             <label>Şifrə
-              <input class="signup-password" type="password" required/>
+              <input class="signup-password" type="password" required placeholder="••••••••"/>
             </label>
+            <p class="signup-alert">Şifrə ən az 8 simvol olmalıdır</p>
             <button class="signup-button" type="submit">Qeydiyyatdan keç</button>
           </form>
         </div>
@@ -107,5 +109,6 @@
 
     <script src="./script.js"></script>
     <script src="./cart.js"></script>
+    <script src="./login.js"></script>
   </body>
 </html>
