@@ -331,7 +331,7 @@ footer{
 }
 
 main{
-    min-height: calc(100vh - 19vw);
+    min-height: calc(100vh - 69vw);
     /* flex  */
     /* margin-top: 45vw; */
     /* none  */
