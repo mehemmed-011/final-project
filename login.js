@@ -12,6 +12,7 @@ let loginIcon = document.querySelector(".login-btn");
 let userIcon = document.querySelector(".user-icon");
 let signupAlert = document.querySelector(".signup-alert");
 let loginAlert = document.querySelector(".login-alert");
+let signupSuccess = document.querySelector(".signup-success");
 
 if(loginTab && signupTab && loginForm && signupForm){
     loginTab.addEventListener("click", ()=>{
@@ -43,10 +44,14 @@ if(signupForm){
             localStorage.setItem("user", JSON.stringify(user));
 
             signupForm.reset();
+
+            signupSuccess.style.display = "block";
+            signupAlert.style.display = "none";
         }
 
         else{
-        signupAlert.style.display = "block";
+            signupAlert.style.display = "block";
+            signupSuccess.style.display = "none";
         } 
     });
 }

@@ -224,6 +224,13 @@ main{
     display: none;
 }
 
+.signup-success{
+    font-size: 15px;
+    text-align: center;
+    color: green;
+    display: none;
+}
+
 .login-button,
 .signup-button{
     width: 100%;
