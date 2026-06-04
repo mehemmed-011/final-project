@@ -85,10 +85,10 @@ if(loginIcon && userIcon){
 }
 
 //bu hisse silinecek
-userIcon.addEventListener("click", (e) => {
-    e.preventDefault();
+// userIcon.addEventListener("click", (e) => {
+//     e.preventDefault();
 
-    localStorage.removeItem("isLoggedIn");
+//     localStorage.removeItem("isLoggedIn");
 
-    window.location.reload();
-});
+//     window.location.reload();
+// });

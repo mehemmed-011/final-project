@@ -59,7 +59,7 @@ header{
 
 .active{
     color: blue;
-    border-bottom: 3px solid blue;
+    border-bottom: 0.2vw solid blue;
 }
 
 .nav-actions{
