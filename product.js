@@ -27,20 +27,20 @@ async function getProducts(){
 
         productBox1.innerHTML += `
         
-            <article class="product-card">
-            <div class="product-img">
-                <img src="${product.thumbnail}" alt="#"/>
-            </div>
-            <div class="product-body">
-                <div class="product-title">${product.title}</div>
-                <div class="product-meta">
-                <span>⭐ ${product.rating}</span>
-                <span>${product.tags[0]}</span>
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="${product.thumbnail}" alt="#"/>
                 </div>
-                <div class="product-price">$${product.price}</div>
-                <button class="add-btn">Səbətə əlavə et</button>
+                <div class="product-body">
+                    <div class="product-title">${product.title}</div>
+                    <div class="product-meta">
+                    <span>⭐ ${product.rating}</span>
+                    <span>${product.tags[0]}</span>
+                    </div>
+                    <div class="product-price">$${product.price}</div>
+                    <button class="add-btn">Səbətə əlavə et</button>
+                </div>
             </div>
-            </article>
         
         `;
     });
@@ -73,20 +73,20 @@ async function getProducts2(){
 
         productBox2.innerHTML += `
         
-            <article class="product-card">
-            <div class="product-img">
-                <img src="${product.thumbnail}" alt="#"/>
-            </div>
-            <div class="product-body">
-                <div class="product-title">${product.title}</div>
-                <div class="product-meta">
-                <span>⭐ ${product.rating}</span>
-                <span>${product.tags[0]}</span>
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="${product.thumbnail}" alt="#"/>
                 </div>
-                <div class="product-price">$${product.price}</div>
-                <button class="add-btn">Səbətə əlavə et</button>
+                <div class="product-body">
+                    <div class="product-title">${product.title}</div>
+                    <div class="product-meta">
+                    <span>⭐ ${product.rating}</span>
+                    <span>${product.tags[0]}</span>
+                    </div>
+                    <div class="product-price">$${product.price}</div>
+                    <button class="add-btn">Səbətə əlavə et</button>
+                </div>
             </div>
-            </article>
         
         `;
     });
@@ -155,20 +155,20 @@ async function smartProduct(){
 
         productBox2.innerHTML += `
         
-            <article class="product-card">
-            <div class="product-img">
-                <img src="${product.thumbnail}" alt="#"/>
-            </div>
-            <div class="product-body">
-                <div class="product-title">${product.title}</div>
-                <div class="product-meta">
-                <span>⭐ ${product.rating}</span>
-                <span>${product.tags[0]}</span>
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="${product.thumbnail}" alt="#"/>
                 </div>
-                <div class="product-price">$${product.price}</div>
-                <button class="add-btn">Səbətə əlavə et</button>
+                <div class="product-body">
+                    <div class="product-title">${product.title}</div>
+                    <div class="product-meta">
+                    <span>⭐ ${product.rating}</span>
+                    <span>${product.tags[0]}</span>
+                    </div>
+                    <div class="product-price">$${product.price}</div>
+                    <button class="add-btn">Səbətə əlavə et</button>
+                </div>
             </div>
-            </article>
         
         `;
     });
@@ -194,20 +194,20 @@ async function laptopProduct(){
 
         productBox2.innerHTML += `
         
-            <article class="product-card">
-            <div class="product-img">
-                <img src="${product.thumbnail}" alt="#"/>
-            </div>
-            <div class="product-body">
-                <div class="product-title">${product.title}</div>
-                <div class="product-meta">
-                <span>⭐ ${product.rating}</span>
-                <span>${product.tags[0]}</span>
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="${product.thumbnail}" alt="#"/>
                 </div>
-                <div class="product-price">$${product.price}</div>
-                <button class="add-btn">Səbətə əlavə et</button>
+                <div class="product-body">
+                    <div class="product-title">${product.title}</div>
+                    <div class="product-meta">
+                    <span>⭐ ${product.rating}</span>
+                    <span>${product.tags[0]}</span>
+                    </div>
+                    <div class="product-price">$${product.price}</div>
+                    <button class="add-btn">Səbətə əlavə et</button>
+                </div>
             </div>
-            </article>
         
         `;
     });
@@ -233,20 +233,20 @@ async function accessoriesProduct(){
 
         productBox2.innerHTML += `
         
-            <article class="product-card">
-            <div class="product-img">
-                <img src="${product.thumbnail}" alt="#"/>
-            </div>
-            <div class="product-body">
-                <div class="product-title">${product.title}</div>
-                <div class="product-meta">
-                <span>⭐ ${product.rating}</span>
-                <span>${product.tags[0]}</span>
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="${product.thumbnail}" alt="#"/>
                 </div>
-                <div class="product-price">$${product.price}</div>
-                <button class="add-btn">Səbətə əlavə et</button>
+                <div class="product-body">
+                    <div class="product-title">${product.title}</div>
+                    <div class="product-meta">
+                    <span>⭐ ${product.rating}</span>
+                    <span>${product.tags[0]}</span>
+                    </div>
+                    <div class="product-price">$${product.price}</div>
+                    <button class="add-btn">Səbətə əlavə et</button>
+                </div>
             </div>
-            </article>
         
         `;
     });
@@ -326,20 +326,20 @@ if(select && productBox2){
 
             productBox2.innerHTML += `
             
-                <article class="product-card">
-                <div class="product-img">
-                    <img src="${product.thumbnail}" alt="#"/>
-                </div>
-                <div class="product-body">
-                    <div class="product-title">${product.title}</div>
-                    <div class="product-meta">
-                    <span>⭐ ${product.rating}</span>
-                    <span>${product.tags[0]}</span>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="${product.thumbnail}" alt="#"/>
                     </div>
-                    <div class="product-price">$${product.price}</div>
-                    <button class="add-btn">Səbətə əlavə et</button>
+                    <div class="product-body">
+                        <div class="product-title">${product.title}</div>
+                        <div class="product-meta">
+                        <span>⭐ ${product.rating}</span>
+                        <span>${product.tags[0]}</span>
+                        </div>
+                        <div class="product-price">$${product.price}</div>
+                        <button class="add-btn">Səbətə əlavə et</button>
+                    </div>
                 </div>
-                </article>
             
             `;
         });

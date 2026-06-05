@@ -153,6 +153,7 @@ main{
 }
 
 .user-page-box{
+    background-color: white;
     width: 40%;
     margin: 0 auto;
     padding: 2vw;
@@ -197,9 +198,9 @@ main{
 
 .user-logout-btn:hover{
     cursor: pointer;
-    background-color: blue;
+    background-color: red;
     color: white;
-    border: 0.2vw solid blue;
+    border: 0.2vw solid red;
 }
 
 
