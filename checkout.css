@@ -1,0 +1,421 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid lightgray;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  width: 80%;
+  height: 4vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Fredericka the Great", serif;
+  font-size: 1.5vw;
+  text-decoration: none;
+  color: black;
+}
+
+.logo2 {
+  font-family: "Fredericka the Great", serif;
+  color: blue;
+}
+
+.menu {
+  display: flex;
+  gap: 2vw;
+}
+
+.menu-phone {
+  display: none;
+}
+
+.nav-a {
+  text-decoration: none;
+  font-size: 1.2vw;
+  color: gray;
+}
+
+.nav-a:hover {
+  color: blue;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 1.5vw;
+}
+
+.cart-btn {
+  width: 4vw;
+  height: 2.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.cart {
+  width: 2.2vw;
+}
+
+.cart-btn:hover {
+  background-color: lightgray;
+  border-radius: 10%;
+}
+
+.cart-count {
+  background-color: blue;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8vw;
+  width: 1vw;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0.2vw;
+}
+
+.login-btn {
+  text-decoration: none;
+  font-size: 1.2vw;
+  color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5vw;
+  height: 2.3vw;
+  border: 2px solid blue;
+  border-radius: 0.2vw;
+}
+
+.login-btn:hover {
+  background-color: blue;
+  color: white;
+}
+
+.user-icon {
+  width: 2.5vw;
+  height: 2.3vw;
+  display: none;
+}
+
+.user-icon:hover {
+  scale: 1.1;
+  transition: 300ms;
+}
+
+.user-icon-img {
+  width: 100%;
+}
+
+.bars {
+  display: none;
+  width: 2.5vw;
+}
+
+main {
+  width: 100%;
+  /* min-height: 100vh; */
+  min-height: calc(100vh - 19vw);
+  margin-top: 4vw;
+  background-color: #f3f9ff;
+}
+
+.notification{
+    text-align: center;
+    padding-top: 2vw;
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: red;
+}
+
+.checkout-section {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3vw;
+}
+
+.checkout-card {
+  width: 30vw;
+  min-width: 320px;
+  background: white;
+  padding: 2vw;
+  border-radius: 1vw;
+  box-shadow: 0 0.4vw 1vw rgba(0, 0, 0, 0.1);
+}
+
+.checkout-title {
+  text-align: center;
+  margin-bottom: 1.5vw;
+  font-size: 1.8vw;
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+.checkout-form input {
+  width: 100%;
+  padding: 0.8vw 1vw;
+  border: 0.1vw solid #ddd;
+  border-radius: 0.5vw;
+  font-size: 0.9vw;
+  outline: none;
+}
+
+.card-row {
+  display: flex;
+  gap: 1vw;
+}
+
+.pay-btn {
+  border: none;
+  cursor: pointer;
+  padding: 0.9vw;
+  border-radius: 0.5vw;
+  background: #2563eb;
+  color: white;
+  font-size: 1vw;
+  transition: 0.3s;
+}
+
+.pay-btn:hover {
+  background: #1d4ed8;
+}
+
+
+/* footer  */
+
+footer {
+  width: 100%;
+  background-color: rgb(17, 24, 39);
+  color: white;
+}
+
+.footer-boxes {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2vw 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+.logo1-f {
+  font-family: "Fredericka the Great", serif;
+  font-size: 1.5vw;
+  text-decoration: none;
+  color: white;
+}
+
+.logo2-f {
+  font-family: "Fredericka the Great", serif;
+  color: blue;
+}
+
+.footer-h4 {
+  font-size: 1.2vw;
+}
+
+.footer-box p,
+a {
+  color: gray;
+  text-decoration: none;
+  font-size: 1vw;
+}
+
+.footer-box a:hover {
+  color: white;
+}
+
+.social a img {
+  width: 2vw;
+}
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  font-size: 0.9vw;
+  color: lightgray;
+  padding: 1vw;
+  border-top: 1px solid gray;
+}
+
+@media (max-width: 600px) {
+  /* header  */
+
+  .container {
+    width: 80%;
+    height: 12vw;
+  }
+
+  .logo {
+    font-size: 4.5vw;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu-phone {
+    background-color: white;
+    margin: 12vw auto 0;
+    padding: 3vw;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3vw;
+    border-bottom: 1px solid lightgray;
+    position: fixed;
+    top: 1px;
+    z-index: 1000;
+  }
+
+  .nav-a {
+    font-size: 3.6vw;
+  }
+
+  .nav-actions {
+    gap: 3vw;
+  }
+
+  .cart-btn {
+    width: 12vw;
+    height: 7.5vw;
+  }
+
+  .cart {
+    width: 6.6vw;
+  }
+
+  .cart-count {
+    font-size: 2.4vw;
+    width: 3vw;
+    top: 0;
+    right: 0.6vw;
+  }
+
+  .login-btn {
+    font-size: 3.6vw;
+    padding: 1.5vw;
+    height: 6.9vw;
+    border-radius: 0.6vw;
+  }
+
+  .user-icon {
+    width: 7.5vw;
+    height: 6.9vw;
+  }
+
+  .bars {
+    display: block;
+    width: 7.5vw;
+  }
+
+  main {
+    min-height: calc(100vh - 69vw);
+    /* flex  */
+    /* margin-top: 45vw; */
+    /* none  */
+    margin-top: 12vw;
+  }
+
+  .notification{
+    padding-top: 4vw;
+    font-size: 3.4vw;
+}
+
+  .checkout-card {
+    width: 90vw;
+    padding: 5vw;
+    border-radius: 3vw;
+  }
+
+  .checkout-title {
+    font-size: 6vw;
+    margin-bottom: 5vw;
+  }
+
+  .checkout-form {
+    gap: 3vw;
+  }
+
+  .checkout-form input {
+    padding: 3vw;
+    font-size: 4vw;
+    border-radius: 2vw;
+  }
+
+  .pay-btn {
+    padding: 3vw;
+    font-size: 4vw;
+    border-radius: 2vw;
+  }
+
+
+  /* footer  */
+
+  .footer-boxes {
+    width: 80%;
+    padding: 3vw 0;
+    flex-direction: column;
+    gap: 4.5vw;
+  }
+
+  .footer-box {
+    width: max-content;
+    gap: 2.25vw;
+  }
+
+  .logo1-f {
+    font-size: 4.5vw;
+  }
+
+  .footer-h4 {
+    font-size: 3.6vw;
+  }
+
+  .footer-box p,
+  a {
+    font-size: 3vw;
+  }
+
+  .social a img {
+    width: 6vw;
+  }
+
+  .footer-bottom {
+    font-size: 2.7vw;
+    padding: 3vw;
+  }
+}

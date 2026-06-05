@@ -97,8 +97,7 @@ let payBtn = document.querySelector(".cart-pay-button");
 if(payBtn){
     payBtn.addEventListener("click", () => {
         if(localStorage.getItem("isLoggedIn") === "true"){
-            // window.location.href = "#";
-            alert("Sifariş uğurla tamamlandı!");
+            window.location.href = "checkout.html";
         }
         else{
             window.location.href = "login.html";
